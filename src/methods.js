@@ -1,6 +1,6 @@
-class methods {
+class Methods {
 
-  findSymptom(drData, symptom){
+  findSymptom(symptom){
     let arrayofSymptoms = [];
     for(let i in symptom){
       if(symptom.includes('uid') && symptom[i] !=null){
@@ -10,9 +10,7 @@ class methods {
     }
     return arrayofSymptoms;
   }
-
 }
-
 
 
 export { Methods };
