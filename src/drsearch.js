@@ -1,13 +1,14 @@
 class DoctorSearch {
-  constructor() {
-  }
+  // constructor() {
+  // }
 
   apiSymptom(userSymptom) {
     return new Promise(function(resolve, reject) {
 
-
-      let symptomRequest = new XMLRequest();
+      let symptomRequest = new XMLHttpRequest();
+      console.log(symptomRequest);
       let url = `https://api.betterdoctor.com/2016-03-01/conditions?user_key=${process.env.API_Key}`;
+      console.log(url);
 
       symptomRequest.onload = function() {
         console.log(symptomRequest);
