@@ -1,6 +1,6 @@
 <p align="center"><img width=27% src="https://github.com/juliajessica/template-webpack-karma/blob/master/media/epicodus_logo.png"></p>
 
-# _<p align="center">Julia Sheremet</p>_
+# _<p align="center">Doctor Lookup: Using The BetterDoctor API</p>_
 
 #### _<p align="center">Assignment for Epicodus</p>_
 
@@ -13,10 +13,9 @@
 
 ## <span style="color:#74875d;">Description</span>
 
-_This webpage application is designed to...._
+_This webpage application is designed where users may enter a medical issue (ie: “sore throat”, "rash", etc.) into a form, submit it, and receive a list of doctors in your city (Portland or Seattle depending on where you are) who can treat their medical issue. Cool!_
 
-
-_This project uses Webpack to bundle and minify the code. The test runner is Karma and the syntax flavor is Jasmine. Babel is used to transpile ES6. All dependencies required are included in this project._
+_This project uses Asynchrony and APIs, and Promises learned from week two at Epicodus. All dependencies required are included in this project._
 
 ## <span style="color:#74875d;">Setup/Installation Requirements</span> :computer:
 
@@ -89,14 +88,15 @@ _Feel free to email me at [juliajessicasher@gmail.com](mailto:juliajessicasher@g
 | CSS-loader & Style-loader | | |
 
 
-
-
 ### <span style="color:#74875d;">Specs</span>
 | Behavior | Input | Output |
 | :-------------     | :------------- | :------------- |
-| The program will  | Input: "" | Output:  |
-
-
+| The program will take in a medical symptom and return a doctor | Input: "Sore Throat" | Output: "Primary Dr, John Doe" |
+| The program will take in a medical symptom and return a variety of doctors | Input: "Sore Throat" | Output: "Primary Dr, Portland Oregon", "Primary Dr, Clackamas Oregon" |
+| The program will take in a specific specialist inquiry and return a variety of doctors | Input: "Primary Doctor" | Output: "Primary Dr, John Smith", "Primary Dr, Mark Johnson", "Primary Dr, Loretta Jones" |
+| For each specialist the program will return a first name, last name, address, phone number, website, and whether on not the doctor is accepting new patients | Input: "Primary Doctor" | Output: "Primary Dr, John Smith", 342 NE 32nd Ave, Portland Oregon, 97232. Phone Number: 971-342-7532, https://www.johnsmtihsaveslives.com, John Smith is now accepting new patients. |
+| The program will result in an error from a insufficient API call | Input: "Primary Doctor, Judy Marquette" | Output: "Sorry, there is an Error loading your request!" |
+| If no doctors meet the search criteria the program will application will return a notification that states that no doctors meet the criteria. | Input: "Sore Throat: Primary Doctor, Mark Smith in Beaverton, OR" | Output: "Sorry, but there are no doctors that meet this criteria" |
 
 ### <span style="color:#74875d;">License</span>
 
