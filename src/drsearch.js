@@ -1,12 +1,13 @@
-class SearchDoctor {
-  constructor(){
+class DoctorSearch {
+  constructor() {
   }
 
   apiSymptom(userSymptom) {
-    return new promise(function(resolve, reject) {//creating an instance of the promise object
+    return new Promise(function(resolve, reject) {
+
 
       let symptomRequest = new XMLRequest();
-      let url = `https://api.betterdoctor.com/2016-03-01/conditions?user_key=${exports.apiKey}`;
+      let url = `https://api.betterdoctor.com/2016-03-01/conditions?user_key=${process.env.apiKey}`;
 
       symptomRequest.onload = function() {
         console.log(symptomRequest);
@@ -23,4 +24,4 @@ class SearchDoctor {
   }
 }//closes class
 
-export { SearchDoctor };
+export { DoctorSearch };

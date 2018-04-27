@@ -1,4 +1,4 @@
-import { SearchDoctor } from './drsearch.js';
+import { DoctorSearch } from './drsearch.js';
 // import { Methods } from './methods.js';
 import $ from 'jquery';
 import 'bootstrap';
@@ -19,16 +19,19 @@ function findSymptom(symptom){
 
 $(document).ready(function(){
   $("#dr-btn").click(function(){
-    let classCaller = new SearchDoctor();//instance of object
+    let classCaller = new DoctorSearch();//instance of object
     let userSymptom = $("#symptom").val();
-    $("#symptom").val("#symptom");
+    $("#symptom").val("");
+    debugger;
 
-    let promise = classCaller.apiSymptom(userSymptom);//instance, method, userinput
+    let promise = classCaller.apiSymptom(userSymptom);
+
+    // let promise = classCaller.apiSymptom(userSymptom);//instance, method, userinput
 
     promise.then(function(drData) {//once i recieve the api run this function
 
       drData = JSON.parse(drData); //readability
-      let symptom = drData.data; //variable created to get info from api array
+      let symptom = drData.data.name; //variable created to get info from api array
       console.log(symptom);
       findSymptom(symptom);
       console.log(findSymptom(symptom));
