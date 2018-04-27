@@ -10,8 +10,9 @@ $(document).ready(function(){
     let userSymptom = $("#symptom").val();
     $("#symptom").val("");
 
-    let promise = classCaller.apiSymptomMethod(userSymptom);//instance, method, userinput
-    promise.then(function(response) {//once i recieve the api run this function
+    let promiseSymptom = classCaller.apiSymptomMethod(userSymptom);//instance, method, userinput
+
+    promiseSymptom.then(function(response) {//once i recieve the api run this function
       response = JSON.parse(response); //readability
       let symptom = response.data[0]; //variable created to get info from api array
       apiSymptomMethod(userSymptom); //call on object method
