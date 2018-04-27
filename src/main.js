@@ -5,17 +5,19 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import $ from 'jquery';
 
-
+//
 // function findSymptom(symptom){
-//   let arrayofSymptoms = [];
-//   for(let i in symptom){
-//     if(symptom.includes('name') && symptom[i] !=null){
-//       $('ul#listOfSymptoms').append('<li>' + symptom[i] + '</li>');
-//       arrayofSymptoms.push(symptom[i]);
-//     }
-//   }
-//   return arrayofSymptoms;
-// }
+  function findSymptom(drData){
+    $("ul#listOfSymptoms").append(drData.data[0]);
+  // let arrayofSymptoms = [];
+  // for(let i in symptom){
+  //   if(symptom.includes('name') && symptom[i] !=null){
+  //     $('ul#listOfSymptoms').append('<li>' + symptom[i] + '</li>');
+  //     arrayofSymptoms.push(symptom[i]);
+  //   }
+  // }
+  // return arrayofSymptoms;
+}
 
 
 $(document).ready(function(){
@@ -34,10 +36,12 @@ $(document).ready(function(){
     promise.then(function(drData) {//once i recieve the api run this function
 
       drData = JSON.parse(drData); //readability
-      let symptom = drData.data.name; //variable created to get info from api array
+      // let symptom = drData.data[0]; //variable created to get info from api array
       console.log(symptom);
-      findSymptom(symptom);
-      console.log(findSymptom(symptom));
+      // findSymptom(symptom);
+      findSymptom(drData);
+      console.log(findSymptom(drData));
+      // console.log(findSymptom(symptom));
 
     }, function(Error){
       console.log("Sorry there is an Error loading your request!");

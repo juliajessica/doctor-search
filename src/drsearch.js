@@ -5,10 +5,9 @@ class DoctorSearch {
   apiSymptom(userSymptom) {
     return new Promise(function(resolve, reject) {
 
-      let symptomRequest = new XMLHttpRequest();
-      console.log(symptomRequest);
-      let url = `https://api.betterdoctor.com/2016-03-01/conditions?user_key=${process.env.API_Key}`;
-      console.log(url);
+      let symptomRequest = new XMLHttpRequest();//instance
+      // console.log(symptomRequest);
+      let url = `https://api.betterdoctor.com/2016-03-01/doctors?location=or-portland&user_location=45.5231%2C%20122.6765&skip=0&limit=10&user_key=${process.env.API_Key}`;
 
       symptomRequest.onload = function() {
         console.log(symptomRequest);
