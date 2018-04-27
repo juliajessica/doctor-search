@@ -1,9 +1,9 @@
-import { DoctorSearch } from './drsearch.js';
 // import { Methods } from './methods.js';
-import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
+import $ from 'jquery';
+import { DoctorSearch } from './drsearch.js';
 
 function findSymptom(symptom){
   let arrayofSymptoms = [];

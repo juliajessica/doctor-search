@@ -7,7 +7,7 @@ class DoctorSearch {
 
 
       let symptomRequest = new XMLRequest();
-      let url = `https://api.betterdoctor.com/2016-03-01/conditions?user_key=${process.env.apiKey}`;
+      let url = `https://api.betterdoctor.com/2016-03-01/conditions?user_key=${process.env.API_Key}`;
 
       symptomRequest.onload = function() {
         console.log(symptomRequest);
