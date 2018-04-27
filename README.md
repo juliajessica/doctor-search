@@ -84,7 +84,7 @@ _Feel free to email me at [juliajessicasher@gmail.com](mailto:juliajessicasher@g
 | Webpack | CSS (Bootstrap) |
 | Eslint | JavaScript (JQuery) |
 | Karma & Jasmine | Popper
-| Babel-loader |  |
+| Babel-loader | API Calls with ES6 |
 | CSS-loader & Style-loader | | |
 
 
