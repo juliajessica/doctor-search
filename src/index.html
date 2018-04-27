@@ -2,15 +2,25 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Title</title>
+    <title>Dr Finder</title>
   </head>
   <body>
     <div class="container-fluid">
       <div class="card">
-        <h2>What Am I</h2>
+        <h2>Discover a Doctor near you</h2>
       </div>
-      <form id="haiku-form">
+    </br>
+    </br>
+      <form id="dr-form">
         <div id="form-inputs" class="control-group">
+          <label for="symptom">What symptoms are you experiencing?</label>
+          <input type="text" id="symptom" class="form-control" placeholder="enter your symptom">
+          <button type="button" name="button" class="btn btn-info">Search</button>
+        </div>
+        <div class="doctor-output">
+          <ul>
+            LIST OF DOCTORS GOES HERE
+          </ul>
         </div>
       </form>
     </div>
