@@ -20,7 +20,7 @@ module.exports = {
     new UglifyJsPlugin({ sourceMap: true }),
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Title Words',
+      title: 'Dr Finder',
       template: './src/index.html',
       inject: 'body'
     }),
