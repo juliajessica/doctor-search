@@ -8,6 +8,7 @@ import $ from 'jquery';
 //
 // function findSymptom(symptom){
   function findSymptom(drData){
+    console.log(drData);
     $("ul#listOfSymptoms").append(drData.data[0]);
   // let arrayofSymptoms = [];
   // for(let i in symptom){
@@ -35,7 +36,7 @@ $(document).ready(function(){
 
     promise.then(function(drData) {//once i recieve the api run this function
 
-      drData = JSON.parse(drData); //readability
+      let drData = JSON.parse(drData); //readability
       // let symptom = drData.data[0]; //variable created to get info from api array
       console.log(symptom);
       // findSymptom(symptom);
