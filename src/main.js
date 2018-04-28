@@ -23,13 +23,14 @@ function findSymptom(response, userSymptom){
     let accepting = response.data[i].practices[0].accepts_new_patients;
     // let image = response.data[i].profile.image_url;
 
-    if (first === null || last === null || title === null || description === null || address === null || phoneNumber === null || accepting === null){
-      $(".error-output").prepend("Sorry, there are no professionals that fit that criteria");
-    } else {
+    if (first != null && first != '' || last != null && last != ''|| title != null && title != '' || description != null && description != '' || address != null && address != '' || phoneNumber != null && phoneNumber != '' || accepting != null && first != ''){
+      // $("p#image").append('<img src="'+ image +'">');
       // $("h3#symptom").append("<strong>Symptom: </strong>" + userSymptom);
       $(".doctor-output").prepend("</br><strong>First Name: </strong>" + first + "</br><strong>Last Name: </strong>" + last + "</br><strong>Title: </strong>" + title + "</br><strong>Description: </strong>" + description + "</br><strong>Address: </strong>" + address + "</br><strong>Phone Number: </strong>" + phoneNumber +  "</br><strong>Avalibility: </strong>" + accepting + "</br>");
+    } else {
+      $(".error-output").prepend("Sorry, there are no professionals that fit that criteria");
 
-      // $("p#image").append('<img src="'+ image +'">');
+
 
     }
   }
