@@ -7,10 +7,14 @@ import $ from 'jquery';
 
 //
 function findSymptom(response, userSymptom){
+  console.log(response);
+  debugger;
 
-  for (let i=0; i<response.length; i ++){
+  for (let i=0;  i<response.length; i++){
     let first = response.data[i].profile.first_name;
-    let first = response.data[i].profile.firstname;
+    console.log(first);
+    let last = response.data[i].profile.last_name;
+    let title = response.data[i].profile.title;
     console.log(first);
 
     if (first === null){
@@ -18,10 +22,11 @@ function findSymptom(response, userSymptom){
     } else {
       $("h3#symptom").append("<strong>Symptom: </strong>" + userSymptom);
       $("#dr-firstname").append("<strong>First Name: </strong>" + first);
-      $("#dr-lastname").append("<strong>Last Name: </strong>" + );
-      $("#address").append("<strong>Address: </strong>" + );
-      $("#phone-number").append("<strong>Phone Number: </strong>" + );
-      $("#avalibility").append("<strong>Avalibility: </strong>");
+      $("#dr-lastname").append("<strong>Last Name: </strong>" + last);
+      $("#title").append("<strong>Title: </strong>" + title);
+      // $("#address").append("<strong>Address: </strong>" + );
+      // $("#phone-number").append("<strong>Phone Number: </strong>" + );
+      // $("#avalibility").append("<strong>Avalibility: </strong>");
 
     }
   }
