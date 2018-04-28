@@ -1,5 +1,5 @@
 // import { Methods } from './methods.js';
-import { DoctorSearch } from './drsearch.js';
+import { DoctorSearch2 } from './drsearch2.js';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
@@ -24,24 +24,22 @@ import $ from 'jquery';
 $(document).ready(function(){
   $("#dr-btn").click(function(event){
     event.preventDefault();
-    let classCaller = new DoctorSearch();//instance of object
+    let classCaller = new DoctorSearch2();//instance of object
     let userSymptom = $("#symptom").val();
     $("#symptom").val("");
     debugger;
 
-    let promiseSymptom = classCaller.apiSymptom(userSymptom);
+    let promiseSymptom = classCaller.apiSymptom(userSymptom);//instance, method, userinput
     console.log(promiseSymptom);
 
-    // let promise = classCaller.apiSymptom(userSymptom);//instance, method, userinput
-
-    promiseSymptom.then(function(drData) {
-      // findSymptom(symptom);
-      console.log(findSymptom(drData));
-      findSymptom(drData);
-      console.log(findSymptom(drData));
-      console.log(drData);
-    }, function(Error){
-      $(".error-output").html("Sorry there is an Error loading your request!");
-    });
+    // promiseSymptom.then(function(drData) {
+    //   // findSymptom(symptom);
+    //   // console.log(findSymptom(drData));
+    //   findSymptom(drData);
+    //   // console.log(findSymptom(drData));
+    //   // console.log(drData);
+    // }, function(Error){
+    //   $(".error-output").html("Sorry there is an Error loading your request!");
+    // });
   });//closes click function
 });//closes .ready function
