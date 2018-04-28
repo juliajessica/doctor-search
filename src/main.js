@@ -36,9 +36,7 @@ $(document).ready(function(){
 
     promise.then(function(drData) {//once i recieve the api run this function
 
-      let drData = JSON.parse(drData); //readability
-      // let symptom = drData.data[0]; //variable created to get info from api array
-      console.log(symptom);
+
       // findSymptom(symptom);
       findSymptom(drData);
       console.log(findSymptom(drData));
