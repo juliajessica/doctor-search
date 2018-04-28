@@ -29,21 +29,19 @@ $(document).ready(function(){
     $("#symptom").val("");
     debugger;
 
-    let promise = classCaller.apiSymptom(userSymptom);
-    console.log(promise);
+    let promiseSymptom = classCaller.apiSymptom(userSymptom);
+    console.log(promiseSymptom);
 
     // let promise = classCaller.apiSymptom(userSymptom);//instance, method, userinput
 
-    promise.then(function(drData) {//once i recieve the api run this function
-
-
+    promiseSymptom.then(function(drData) {
       // findSymptom(symptom);
+      console.log(findSymptom(drData));
       findSymptom(drData);
       console.log(findSymptom(drData));
-      // console.log(findSymptom(symptom));
-
+      console.log(drData);
     }, function(Error){
-      console.log("Sorry there is an Error loading your request!");
+      $(".error-output").html("Sorry there is an Error loading your request!");
     });
   });//closes click function
 });//closes .ready function
