@@ -6,16 +6,23 @@ import './styles.css';
 import $ from 'jquery';
 
 //
-function findSymptom(response){
+function findSymptom(response, userSymptom){
 
   for (let i=0; i<response.length; i ++){
+    let first = response.data[i].profile.first_name;
     let first = response.data[i].profile.firstname;
     console.log(first);
 
     if (first === null){
       $(".error-output").append("Sorry, there are no professionals that fit that criteria");
     } else {
-      $("#dr-firstname").append("<li>" + first + "</li>");
+      $("h3#symptom").append("<strong>Symptom: </strong>" + userSymptom);
+      $("#dr-firstname").append("<strong>First Name: </strong>" + first);
+      $("#dr-lastname").append("<strong>Last Name: </strong>" + );
+      $("#address").append("<strong>Address: </strong>" + );
+      $("#phone-number").append("<strong>Phone Number: </strong>" + );
+      $("#avalibility").append("<strong>Avalibility: </strong>");
+
     }
   }
 //     let arrayofSymptoms = [];
@@ -47,7 +54,7 @@ $(document).ready(function(){
       // let drData = response;
       // console.log(drData);
       // let drData = response.data[0].profile;
-      findSymptom(response);//json API data, user input
+      findSymptom(response, userSymptom);//json API data, user input
     }, function(Error){
       $(".error-output").html("Sorry there is an Error loading your request!");
     });
