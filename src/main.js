@@ -8,8 +8,8 @@ import $ from 'jquery';
 //
 function findSymptom(drData){
 
-  for (i=0; i<drData.length; i ++){
-    let first = drData.profile.firstname;
+  for (let i=0; i<drData.length; i ++){
+    let first = drData[i].profile.firstname;
   }
 
   $("ul#listOfSymptoms").append(first);
@@ -36,12 +36,12 @@ $(document).ready(function(){
     debugger;
 
     let promiseSymptom = classCaller.apiSymptom(userSymptom);//instance, method, userinput
-    console.log(promiseSymptom);
 
     promiseSymptom.then(function(response) {
       response = JSON.parse(response);
       console.log(response);
-      let drData = response.data[i];
+      let drData = response.data;
+      console.log(drData);
       // let drData = response.data[0].profile;
       findSymptom(drData);//json API data, user input
     }, function(Error){
