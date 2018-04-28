@@ -9,7 +9,9 @@ import $ from 'jquery';
 function findSymptom(drData){
 
   for (let i=0; i<drData.length; i ++){
-    let first = drData[i].profile.firstname;
+    debugger;
+    let first = drData.data[i].profile.firstname;
+    console.log(first);
   }
 
   $("ul#listOfSymptoms").append(first);
@@ -33,14 +35,13 @@ $(document).ready(function(){
     let classCaller = new DoctorSearchTwo();
     let userSymptom = $("#symptom").val();
     $("#symptom").val("");
-    debugger;
 
     let promiseSymptom = classCaller.apiSymptom(userSymptom);//instance, method, userinput
 
     promiseSymptom.then(function(response) {
       response = JSON.parse(response);
       console.log(response);
-      let drData = response.data;
+      let drData = response;
       console.log(drData);
       // let drData = response.data[0].profile;
       findSymptom(drData);//json API data, user input
