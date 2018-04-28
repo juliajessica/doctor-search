@@ -6,12 +6,13 @@ import './styles.css';
 import $ from 'jquery';
 
 //
-function findSymptom(ourData){
-  let drInfo = '';
-//   function findSymptom(){
-//     let symptom = ourData.data[0].profile;
-//     console.log(symptom);
-$("ul#listOfSymptoms").append(ourData.data[0].profile);
+function findSymptom(drData){
+
+  for (i=0; i<drData.length; i ++){
+    let first = drData.profile.firstname;
+  }
+
+  $("ul#listOfSymptoms").append(first);
 //     let arrayofSymptoms = [];
 //     for(let i in symptom){
 //       if(i.includes('profile') && symptom[i] !=null){
@@ -36,10 +37,13 @@ $(document).ready(function(){
 
     let promiseSymptom = classCaller.apiSymptom(userSymptom);//instance, method, userinput
     console.log(promiseSymptom);
-    // let drData = ourData.data[0];
-    promiseSymptom.then(function(drData) {
-      let ourData = JSON.parse(drData);
-      findSymptom(ourData);//json API data, user input
+
+    promiseSymptom.then(function(response) {
+      response = JSON.parse(response);
+      console.log(response);
+      let drData = response.data[i];
+      // let drData = response.data[0].profile;
+      findSymptom(drData);//json API data, user input
     }, function(Error){
       $(".error-output").html("Sorry there is an Error loading your request!");
     });
