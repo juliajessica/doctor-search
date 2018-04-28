@@ -13,9 +13,9 @@ function findSymptom(response){
     console.log(first);
 
     if (first === null){
-      $("ul#listOfSymptoms").append("Sorry, there are no professionals that fit that criteria");
+      $(".error-output").append("Sorry, there are no professionals that fit that criteria");
     } else {
-      $("ul#listOfSymptoms").append("<li>" + first + "</li>");
+      $("#dr-firstname").append("<li>" + first + "</li>");
     }
   }
 //     let arrayofSymptoms = [];
