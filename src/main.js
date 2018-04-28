@@ -13,18 +13,17 @@ function findSymptom(response, userSymptom){
     let first = response.data[i].profile.first_name;
     let last = response.data[i].profile.last_name;
     let title = response.data[i].profile.title;
-    let image = response.data[i].profile.image_url;
+    // let image = response.data[i].profile.image_url;
     // let title = response.data[i].profile.title;
 
 
     if (first === null){
-      $(".error-output").append("Sorry, there are no professionals that fit that criteria");
+      $(".error-output").prepend("Sorry, there are no professionals that fit that criteria");
     } else {
       // $("h3#symptom").append("<strong>Symptom: </strong>" + userSymptom);
-      $("#dr-firstname").append("<strong>First Name: </strong>" + first);
-      $("#dr-lastname").append("<strong>Last Name: </strong>" + last);
-      $("#title").append("<strong>Title: </strong>" + title);
-      $("p#image").append("<img src='img' alt='image of doctor'>");
+      $("#doctor-output").prepend("</br><strong>First Name: </strong>" + first + "<strong>Last Name: </strong>" + last + "</br><strong>Title: </strong>" + title "</br>");
+
+      // $("p#image").append('<img src="'+ image +'">');
       // $("#address").append("<strong>Address: </strong>" + );
       // $("#phone-number").append("<strong>Phone Number: </strong>" + );
       // $("#avalibility").append("<strong>Avalibility: </strong>");
