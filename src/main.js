@@ -13,20 +13,22 @@ function findSymptom(response, userSymptom){
     let first = response.data[i].profile.first_name;
     let last = response.data[i].profile.last_name;
     let title = response.data[i].profile.title;
+    let speciality = response.data[i].specialties[0].name;
+    let description = response.data[i].specialties[0].description;
+    let address = response.data[i].practices[0].visit_address.street  + response.data[i].practices[0].visit_address.city
+    + response.data[i].practices[0].visit_address.state + response.data[i].practices[0].visit_address.state.state_long + response.data[i].practices[0].visit_address.state.zip
+;
+    let phoneNumber = response.data[i].practices[0].phones[0].number;
+    let accepting = response.data[i].practices[0].accepts_new_patients;
     // let image = response.data[i].profile.image_url;
-    // let title = response.data[i].profile.title;
-
 
     if (first === null){
       $(".error-output").prepend("Sorry, there are no professionals that fit that criteria");
     } else {
       // $("h3#symptom").append("<strong>Symptom: </strong>" + userSymptom);
-      $("#doctor-output").prepend("</br><strong>First Name: </strong>" + first + "<strong>Last Name: </strong>" + last + "</br><strong>Title: </strong>" + title "</br>");
+      $(".doctor-output").prepend("</br><strong>First Name: </strong>" + first + "</br><strong>Last Name: </strong>" + last + "</br><strong>Title: </strong>" + title + "</br><strong>Specialty: </strong>" + speciality + "</br><strong>Description: </strong>" + description + "</br><strong>Address: </strong>" + address + "</br><strong>Phone Number: </strong>" + phoneNumber +  "</br><strong>Avalibility: </strong>" + accepting);
 
       // $("p#image").append('<img src="'+ image +'">');
-      // $("#address").append("<strong>Address: </strong>" + );
-      // $("#phone-number").append("<strong>Phone Number: </strong>" + );
-      // $("#avalibility").append("<strong>Avalibility: </strong>");
 
     }
   }
