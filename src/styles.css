@@ -16,3 +16,14 @@ input {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+label {
+  font-size: 25px;
+}
+
+.center-text {
+  margin: auto;
+  width: 96%;
+  font-size: 17px;
+  padding: 3%;
+}
