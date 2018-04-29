@@ -24,7 +24,8 @@ function findSymptom(response, userSymptom){
     if (first != null && first != '' || last != null && last != ''|| title != null && title != '' || description != null && description != '' || address != null && address != '' || phoneNumber != null && phoneNumber != '' || accepting != null && first != ''){
       // $("p#image").append('<img src="'+ image +'">');
       // $("h3#symptom").append("<strong>Symptom: </strong>" + userSymptom);
-      $(".doctor-output").prepend("</br><strong>First Name: </strong>" + first + "</br><strong>Last Name: </strong>" + last + "</br><strong>Title: </strong>" + title + "</br><strong>Specialty: </strong>" + speciality + "</br><strong>Description: </strong>" + description + "</br><strong>Address: </strong>" + address + "</br><strong>Phone Number: </strong>" + phoneNumber +  "</br><strong>Avalibility: </strong>" + accepting + "</br>");
+      $(".doctor-output").show();
+      $(".doctor-output").prepend("</br><strong>First Name: </strong>" + first + "</br><strong>Last Name: </strong>" + last + "</br><strong>Title: </strong>" + title + "</br><strong>Specialty: </strong>" + speciality + "</br><strong>Description: </strong>" + description + "</br><strong>Address: </strong>" + address + "</br><strong>Phone Number: </strong>" + phoneNumber +  "</br><strong>Avalibility: </strong>" + accepting + "</br><hr>");
     } else {
       $(".error-output").prepend("Sorry, there are no professionals that fit that criteria");
 

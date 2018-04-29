@@ -27,3 +27,15 @@ label {
   font-size: 17px;
   padding: 3%;
 }
+
+.doctor-output {
+  display: none;
+  padding: 14px;
+  margin: 25px;
+  background-color: #d7dbe0;
+}
+
+img {
+  width: 50%;
+  height: auto;
+}
