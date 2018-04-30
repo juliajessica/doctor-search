@@ -83,3 +83,12 @@ body .btn-primary, body .btn-primary:active, body .btn-primary:visited, body .bt
   background-color: #5C6756;
   border-color: #B5BAA9;
 }
+
+a {
+  color: #56A1A9;
+
+}
+a:hover {
+  color: #889084;
+  font-weight: bold;
+}

@@ -6,7 +6,7 @@ import $ from 'jquery';
 
 
 function findSymptom(response, userSymptom){
-  debugger;
+  // debugger;
   for (let i=0;  i<response.data.length; i++){
     let first = response.data[i].profile.first_name;
     let last = response.data[i].profile.last_name;
