@@ -17,8 +17,9 @@ input {
   margin-bottom: 10px;
 }
 
-label {
+h4 {
   font-size: 25px;
+  margin-bottom: 20px;
 }
 
 .center-text {
@@ -42,4 +43,8 @@ img {
 
 strong {
   font-size: 19px;
+}
+
+button {
+  margin-top: 10px;
 }

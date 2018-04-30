@@ -29,9 +29,9 @@ function findSymptom(response, userSymptom){
       // $("p#image").append('<img src="'+ image +'">');
       // $("h3#symptom").append("<strong>Symptom: </strong>" + userSymptom);
       $(".doctor-output").show();
-      $(".doctor-output").prepend("</br><strong>First Name: </strong>" + first + "</br><strong>Last Name: </strong>" + last + "</br><strong>Title: </strong>" + title + "</br><strong>Specialty: </strong>" + speciality + "</br><strong>Description: </strong>" + description + "</br><strong>Address: </strong>" + address + "</br><strong>Phone Number: </strong>" + phoneNumber + "</br><strong>Website: </strong>" + "<a href='" + website + "'>" + website + "</a>" + "</br><strong>Avalibility: </strong>" + accepting + "</br><hr>");
+      $(".doctor-output").prepend("</br><strong>First Name: </strong>" + first + "</br><strong>Last Name: </strong>" + last + "</br><strong>Title: </strong>" + title + "</br><strong>Specialty: </strong>" + speciality + "</br><strong>Description: </strong>" + description + "</br><strong>Address: </strong>" + address + "</br><strong>Phone Number: </strong>" + phoneNumber + "</br><strong>Website: </strong>" + "<a href='" + website + "'>" + website + "</a>" + "</br><strong>Avalibility: </strong>" + accepting + "</br><button type='button' class='btn btn-primary' id='more-info' data-toggle='modal' data-target='#addressModal'>Book an Appointment</button>" + "</br><hr>");
 
-       // + "<button type="button" class="btn btn-primary" id="more-info" data-toggle="modal" data-target="#exampleModal">Book an Appointment</button>"
+
     } else {
       $(".error-output").prepend("Sorry, there are no professionals that fit that criteria");
 
@@ -57,10 +57,5 @@ $(document).ready(function(){
     }, function(Error){
       $(".error-output").html("Sorry there is an Error loading your request!");
     });
-    //
-    // $("#more-info").click(function){
-    //   $("").show();
-   //   findSymptom(response, userSymptom);
-    // };
   });
 });
