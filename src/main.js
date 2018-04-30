@@ -33,15 +33,6 @@ function findSymptom(response, userSymptom){
 
     }
   }
-//     let arrayofSymptoms = [];
-//     for(let i in symptom){
-//       if(i.includes('profile') && symptom[i] !=null){
-//       $('ul#listOfSymptoms').append('<li>' + symptom[i] + '</li>');
-//       console.log(symptom[i]);
-//       arrayofSymptoms.push(symptom[i]);
-//     }
-//   }
-//   return arrayofSymptoms;
 }
 
 $(document).ready(function(){
