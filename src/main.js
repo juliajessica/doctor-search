@@ -18,25 +18,33 @@ function findSymptom(response, userSymptom){
     let phoneNumber = response.data[i].practices[0].phones[0].number;
     let website = response.data[i].practices[0].website;
     let accepting = response.data[i].practices[0].accepts_new_patients;
-
-    // let image = response.data[i].profile.image_url;
+    let image = response.data[i].profile.image_url;
 
     if (website === undefined) {
       website = "Sorry, there is no website at this very moment";
     }
+    if (accepting === true) {
+      accepting = "Avaliable for appointments";
+    } else {
+      accepting = "Sorry, there are no appointments avalible!";
+    }
 
     if (first != null && first != '' || last != null && last != ''|| title != null && title != '' || description != null && description != '' || address != null && address != '' || phoneNumber != null && phoneNumber != '' || website != null && website != '' || accepting != null && accepting != ''){
-      // $("p#image").append('<img src="'+ image +'">');
-      // $("h3#symptom").append("<strong>Symptom: </strong>" + userSymptom);
-      $(".doctor-output").show();
-      $(".doctor-output").prepend("</br><strong>First Name: </strong>" + first + "</br><strong>Last Name: </strong>" + last + "</br><strong>Title: </strong>" + title + "</br><strong>Specialty: </strong>" + speciality + "</br><strong>Description: </strong>" + description + "</br><strong>Address: </strong>" + address + "</br><strong>Phone Number: </strong>" + phoneNumber + "</br><strong>Website: </strong>" + "<a href='" + website + "'>" + website + "</a>" + "</br><strong>Avalibility: </strong>" + accepting + "</br><button type='button' class='btn btn-primary' id='more-info' data-toggle='modal' data-target='#addressModal'>Book an Appointment</button>" + "</br><hr>");
-
-
+    $(".doctor-output").show();
+    $(".doctor-output").prepend(
+      "<img src='" + image + "'></br>" +
+      "<strong>First Name: </strong>" + first +
+      "</br><strong>Last Name: </strong>" + last +
+      "</br><strong>Title: </strong>" + title +
+      "</br><strong>Specialty: </strong>" + speciality +
+      "</br><strong>Description: </strong>" + description +
+      "</br><strong>Address: </strong>" +  address +
+      "</br><strong>Phone Number: </strong>" +  phoneNumber +
+      "</br><strong>Website: </strong>" + "<a href='" + website + "'>" + website + "</a>" +
+      "</br><strong>Avalibility: </strong>" + accepting +
+      "</br><button type='button' class='btn btn-primary' id='more-info' data-toggle='modal' data-target='#addressModal'>Book an Appointment</button>" + "</br><hr>");
     } else {
       $(".error-output").prepend("Sorry, there are no professionals that fit that criteria");
-
-
-
     }
   }
 }
