@@ -7,7 +7,6 @@ import $ from 'jquery';
 
 function findSymptom(response, userSymptom){
   debugger;
-
   for (let i=0;  i<response.data.length; i++){
     let first = response.data[i].profile.first_name;
     let last = response.data[i].profile.last_name;
@@ -15,17 +14,24 @@ function findSymptom(response, userSymptom){
     let speciality = response.data[i].specialties[0].name;
     let description = response.data[i].specialties[0].description;
     let address = response.data[i].practices[0].visit_address.street  + ", " +  response.data[i].practices[0].visit_address.city + ", "
-    + response.data[i].practices[0].visit_address.state + " " +  response.data[i].practices[0].visit_address.zip
-;
+    + response.data[i].practices[0].visit_address.state + " " +  response.data[i].practices[0].visit_address.zip;
     let phoneNumber = response.data[i].practices[0].phones[0].number;
+    let website = response.data[i].practices[0].website;
     let accepting = response.data[i].practices[0].accepts_new_patients;
+
     // let image = response.data[i].profile.image_url;
 
-    if (first != null && first != '' || last != null && last != ''|| title != null && title != '' || description != null && description != '' || address != null && address != '' || phoneNumber != null && phoneNumber != '' || accepting != null && first != ''){
+    if (website === undefined) {
+      website = "Sorry, there is no website at this very moment";
+    }
+
+    if (first != null && first != '' || last != null && last != ''|| title != null && title != '' || description != null && description != '' || address != null && address != '' || phoneNumber != null && phoneNumber != '' || website != null && website != '' || accepting != null && accepting != ''){
       // $("p#image").append('<img src="'+ image +'">');
       // $("h3#symptom").append("<strong>Symptom: </strong>" + userSymptom);
       $(".doctor-output").show();
-      $(".doctor-output").prepend("</br><strong>First Name: </strong>" + first + "</br><strong>Last Name: </strong>" + last + "</br><strong>Title: </strong>" + title + "</br><strong>Specialty: </strong>" + speciality + "</br><strong>Description: </strong>" + description + "</br><strong>Address: </strong>" + address + "</br><strong>Phone Number: </strong>" + phoneNumber +  "</br><strong>Avalibility: </strong>" + accepting + "</br><hr>");
+      $(".doctor-output").prepend("</br><strong>First Name: </strong>" + first + "</br><strong>Last Name: </strong>" + last + "</br><strong>Title: </strong>" + title + "</br><strong>Specialty: </strong>" + speciality + "</br><strong>Description: </strong>" + description + "</br><strong>Address: </strong>" + address + "</br><strong>Phone Number: </strong>" + phoneNumber + "</br><strong>Website: </strong>" + "<a href='" + website + "'>" + website + "</a>" + "</br><strong>Avalibility: </strong>" + accepting + "</br><hr>");
+
+       // + "<button type="button" class="btn btn-primary" id="more-info" data-toggle="modal" data-target="#exampleModal">Book an Appointment</button>"
     } else {
       $(".error-output").prepend("Sorry, there are no professionals that fit that criteria");
 
@@ -51,5 +57,10 @@ $(document).ready(function(){
     }, function(Error){
       $(".error-output").html("Sorry there is an Error loading your request!");
     });
+    //
+    // $("#more-info").click(function){
+    //   $("").show();
+   //   findSymptom(response, userSymptom);
+    // };
   });
 });

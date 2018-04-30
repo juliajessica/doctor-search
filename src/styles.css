@@ -39,3 +39,7 @@ img {
   width: 50%;
   height: auto;
 }
+
+strong {
+  font-size: 19px;
+}
