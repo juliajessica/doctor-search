@@ -18,9 +18,9 @@ _This webpage application is designed where users may enter a medical issue (ie:
 _This project uses Asynchrony and APIs, and Promises learned from week two at Epicodus. All dependencies required are included in this project._
 
 ## <span style="color:#74875d;">Setup/Installation Requirements</span> :computer:
-
 * Clone repository on your local computer.
 * If you already have Node, Homebrew, and Karma installed, then skip to **Install Dependencies**.
+* Create an .env file and go to <a href="https://openweathermap.org/current">Open Weather Map</a> and get a personal API key and add it to the .env file like this: API_KEY=[enter API Key here]
 
   #### Node: Windows / Linux Installation Instructions
   To install `Node` on other systems, go to the <a href="https://nodejs.org/en/">Node website</a>, download and install the appropriate installer for your operating system.
