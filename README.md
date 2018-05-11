@@ -42,11 +42,7 @@ _This project uses Asynchrony and APIs, and Promises learned from week two at Ep
   ```sh
     $ echo 'export PATH=/usr/local/bin:$PATH' >> ~/.bash_profile
   ```
-  #### Karma Installation
-  If you do not have `Karma` installed globally, then run the following:
-  ```sh   
-    $ npm install -g karma-cli
-   ```
+
   #### Install dependencies
   Enter the following code in the command line to install all dependencies:
   ```sh
