@@ -1,5 +1,3 @@
-<p align="center"><img width=27% src="https://github.com/juliajessica/template-webpack-karma/blob/master/media/epicodus_logo.png"></p>
-
 # _<p align="center">Doctor Lookup: Using The BetterDoctor API</p>_
 
 #### _<p align="center">Assignment for Epicodus</p>_
