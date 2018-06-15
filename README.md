@@ -15,6 +15,17 @@ _This webpage application is designed where users may enter a medical issue (ie:
 
 _This project uses Asynchrony and APIs, and Promises learned from week two at Epicodus. All dependencies required are included in this project._
 
+
+| Screenshot of the Application | API Call and Form to take in an Appointment |
+| ------------- | ------------- |
+| ![Screenshot](src/img/homepage.png) | ![Screenshot](src/img/search.png) |
+
+| Form for Appointment | Thank you message |
+| ------------- | ------------- |
+| ![Screenshot](src/img/form.png) | ![Screenshot](src/img/thankyou.png) |
+
+
+
 ## <span style="color:#74875d;">Setup/Installation Requirements</span> :computer:
 * Clone repository on your local computer.
 * If you already have Node, Homebrew, and Karma installed, then skip to **Install Dependencies**.
