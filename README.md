@@ -13,7 +13,7 @@
 
 https://juliajessica.github.io/doctor-search/
 
-_This webpage application is designed where users may enter a medical issue (ie: “sore throat”, "rash", etc.) into a form, submit it, and receive a list of doctors in your city (Portland or Seattle depending on where you are) who can treat their medical issue. Cool!_
+_This webpage application is designed where users may enter a medical issue (ie: “a sore throat”, "rash", etc.) into a form, submit it, and receive a list of doctors in Portland depending on where you are) who can treat their medical issue._
 
 _This project uses Asynchrony and APIs, and Promises learned from week two at Epicodus. All dependencies required are included in this project._
 
