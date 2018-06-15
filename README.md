@@ -18,7 +18,7 @@ _This project uses Asynchrony and APIs, and Promises learned from week two at Ep
 
 | Screenshot of the Application | API Call and Form to take in an Appointment |
 | ------------- | ------------- |
-| ![Screenshot](src/img/homepage.png) | ![Screenshot](src/img/search.png) |
+| ![Screenshot](src/img/homepage1.png) | ![Screenshot](src/img/search.png) |
 
 | Form for Appointment | Thank you message |
 | ------------- | ------------- |
