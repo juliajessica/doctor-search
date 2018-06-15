@@ -31,7 +31,6 @@
 .DS_Store
 .DS_Store?
 node_modules/
-dist/
 ._*
 .Spotlight-V100
 .Trashes
